@@ -70,8 +70,19 @@ export default function Hello({}: Props) {
     }
 };
 
+const glassStyle = {
+  background: "rgba(74, 144, 226, 0.25)",
+  boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+  backdropFilter: "blur(10.5px)",
+  WebkitBackdropFilter: "blur(10.5px)",
+  borderRadius: "10px",
+  border: "1px solid rgba(255, 255, 255, 0.18)"
+};
+
+
+
   return (
-    <div className='col-8 mx-auto'>
+    <div className='col-8 mx-auto p-4' style={glassStyle}>
         <div><h1>✏️ To Do List</h1></div><br />
         <div className='d-flex flex-column  col-10 mx-auto justify-content-between'>
             <input type="text" className='form-control' placeholder='Enter your task' value={task} required onChange={(e)=>setTask(e.target.value)}/>
