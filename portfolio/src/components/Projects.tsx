@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TimeLineCard from '../shared_component/TimeLineCard';
 
-type Props = {};
 
-const Projects = (props: Props) => {
+const Projects = () => {
   const projects = [
     {
       projectName: "Tomato - Cloud based food delivery for home-cooked and cloud kitchen",
@@ -73,7 +72,7 @@ const Projects = (props: Props) => {
         {/* Display Selected Project Details */}
         <div className="col-sm-12 col-md-6 col-lg-6">
           <TimeLineCard
-            bootstrapClass="col-12 my-2"
+            bootstrapClass="col-12 my-2 px-2 pt-1"
             style={{ padding: "2px" }}
             projectName={selectedProject.projectName}
             projectDescription={selectedProject.projectDescription}
